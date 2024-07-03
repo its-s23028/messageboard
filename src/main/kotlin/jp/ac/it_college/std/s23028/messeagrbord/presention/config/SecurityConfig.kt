@@ -18,7 +18,7 @@ class SecurityConfig {
 
     @Bean
     @Order(1)
-    fun springSecurityFilterChain(http: HttpSecurity): SecurityFilterChain {
+    fun customSecurityFilterChain(http: HttpSecurity): SecurityFilterChain {
         http
             .authorizeHttpRequests { authorize ->
                 authorize.anyRequest().permitAll()
